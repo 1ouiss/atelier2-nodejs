@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello <%= user.name %></h1>
+        
+    <ul>
+        <% for (let i = 0; i < menu.length; i++) { %>
+            <li>
+                <%= menu[i].name %> - <%= menu[i].price %> €
+                <a href="/addtocart?id=<%= menu[i].id%>">
+                    Add to cart
+                </a>
+            </li>
+        <% } %>
+    </ul>
+    <h2>
+        <%= error %>
+    </h2>
+
+    <h2>Cart</h2>
+    <div>
+        Il vous reste un budget de <%= user.total %> €
+    </div>
+    <ul>
+        <% for (let i = 0; i < cart.length; i++) { %>
+            <li>
+                <%= cart[i].name %> - <%= cart[i].price %> €
+                <a href="/removefromcart?id=<%= i %>">
+                    Remove from cart
+                </a>
+            </li>
+        <% } %>
+    </ul>
+    <!-- add total of cart  -->
+    <h3>
+        Total: <%= totalCart %> €
+    </h3>
+</body>
+</html>
