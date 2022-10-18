@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
+app.use(express.static(__dirname + '/public'));
+
 const render = (res, error) => {
     res.render('cart', {user: user, menu: menu, cart: cart, error: error, totalCart: totalCart});
 };
@@ -47,7 +49,6 @@ app.get('/addtocart', (req, res) => {
 });
 
 app.get('/removefromcart', (req, res) => {
-    console.log(req.query);
     cart.forEach((item, index) => {
         if (index == req.query.id) {
             user.total += item.price;
