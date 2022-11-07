@@ -9,11 +9,11 @@ const render = (res, error) => {
 };
 
 const menu = [
-    { id: 1, name: "plat du jour", price: 19.90, category: "lunch" },
+    { id: 1, name: "Plat du jour", price: 19.90, category: "lunch" },
     { id: 2, name: "Sandwidch", price: 6, category: "lunch" },
-    { id: 3, name: "milkshake", price: 3, category: "boisson" },
-    { id: 4, name: "coca", price: 2, category: "boisson"},
-    { id: 5, name: "biere", price: 7, category: "alcohol" }
+    { id: 3, name: "Milkshake", price: 3, category: "boisson" },
+    { id: 4, name: "Coca", price: 2, category: "boisson"},
+    { id: 5, name: "Bière", price: 7, category: "alcohol" }
 ];
 let user = {};
 const cart = [];
